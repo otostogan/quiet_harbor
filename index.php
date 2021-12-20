@@ -1,149 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="css/style.min.css">
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
-</head>
-<body>
-    <div class="margin"></div>
-    <header class="header">
-        <div class="container">
-            <div class="header__wrapper">
-                <div class="header__logo">
-                        <img src="icons/logo/logo.svg" alt="">
-                        <div class="header__logo-title">
-                            тихая гавань
-                        </div>
-                </div>
-                <ul class="header__menu">
-                    <li>
-                        Услуги
-                    </li>
-                    <li>
-                        Филиалы
-                    </li>
-                    <li>
-                        Отзывы
-                    </li>
-                    <li>
-                        Вопрос/Ответ
-                    </li>
-                    <li>
-                        Статьи
-                    </li>
-                    <li>
-                        Персонал
-                    </li>
-                    <li>
-                        О пансионате
-                    </li>
-                    <li>
-                        Контакты
-                    </li>
-                </ul>
-                <div class="header__mobile">
-                    <div class="subheader__contact">
-                        <a href="tel:380686981255">+380 68 698 12 55</a>
-                        <div class="btn">
-                            Заказать звонок
-                        </div>
-                        <select class="subheader__contact-lang">
-                            <option>RU</option>
-                            <option>UK</option>
-                        </select>
-                        <div class="header__burger">
-                            <div></div>
-                            <div></div>
-                            <div></div>
-                        </div>
-                    </div>
-                </div>
-                <div class="header__mobile-menu">
-                    <div class="header__mobile-block">
-                        <select class="subheader__location-list">
-                            <option>Запорожье</option>
-                            <option>Пункт 2</option>
-                        </select>
-                        <div class="subheader__contact">
-                            <div class="btn">
-                                Заказать звонок
-                            </div>
-                            <select class="subheader__contact-lang">
-                                <option>RU</option>
-                                <option>UK</option>
-                            </select>
-                        </div>
-                        <a href="tel:380686981255" class="header__mobile-number">+380 68 698 12 55</a>
-                        <ul class="header__menu">
-                            <li>
-                                Услуги
-                            </li>
-                            <li>
-                                Филиалы
-                            </li>
-                            <li>
-                                Отзывы
-                            </li>
-                            <li>
-                                Вопрос/Ответ
-                            </li>
-                            <li>
-                                Статьи
-                            </li>
-                            <li>
-                                Персонал
-                            </li>
-                            <li>
-                                О пансионате
-                            </li>
-                            <li>
-                                Контакты
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="header__mobile-close">
-                        &#10006;
-                    </div>
-                </div>
-            </div>
-        </div>
-    </header>
-    <div class="subheader">
-        <div class="container">
-            <div class="subheader__wrapper">
-                <div class="subheader__wrapper-wrapper">
-                    <div class="subheader__location">
-                        <div class="subheader__location-text">
-                            Выберите Вашу локацию
-                        </div>
-                        <select class="subheader__location-list">
-                            <option>Запорожье</option>
-                            <option>Пункт 2</option>
-                        </select>
-                    </div>
-                    <div class="subheader__contact">
-                        <a href="tel:380686981255">+380 68 698 12 55</a>
-                        <div class="btn">
-                            Заказать звонок
-                        </div>
-                        <select class="subheader__contact-lang">
-                            <option>RU</option>
-                            <option>UK</option>
-                        </select>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
+<?php
+    get_header();
+?>
     <section class="main">
         <div class="main__slider">
-            <div><img src="img/01.png" alt=""></div>
-            <div><img src="img/01.png" alt=""></div>
-            <div><img src="img/01.png" alt=""></div>
+            <div><img src="<?php echo bloginfo('template_url'); ?>/assets/img/01.png" alt=""></div>
+            <div><img src="<?php echo bloginfo('template_url'); ?>/assets/img/01.png" alt=""></div>
+            <div><img src="<?php echo bloginfo('template_url'); ?>/assets/img/01.png" alt=""></div>
         </div>
         <div class="container">
             <div class="main__content">
@@ -169,7 +31,7 @@
             <div class="services__wrapper">
                 <div class="services__item">
                     <div class="services__item-img">
-                        <img src="icons/services/services-1.svg" alt="">
+                        <img src="<?php echo bloginfo('template_url'); ?>/assets/icons/services/services-1.svg" alt="">
                     </div>
                     <div class="services__item-text">
                         Уход за пожилыми <br>  людьми
@@ -177,7 +39,7 @@
                 </div>
                 <div class="services__item">
                     <div class="services__item-img">
-                        <img src="icons/services/services-2.svg" alt="">
+                        <img src="<?php echo bloginfo('template_url'); ?>/assets/icons/services/services-2.svg" alt="">
                     </div>
                     <div class="services__item-text">
                         Уход за лежачими <br> больными
@@ -185,7 +47,7 @@
                 </div>
                 <div class="services__item">
                     <div class="services__item-img">
-                        <img src="icons/services/services-3.svg" alt="">
+                        <img src="<?php echo bloginfo('template_url'); ?>/assets/icons/services/services-3.svg" alt="">
                     </div>
                     <div class="services__item-text">
                         Уход за пожилыми с <br> инвалидностью
@@ -193,7 +55,7 @@
                 </div>
                 <div class="services__item">
                     <div class="services__item-img">
-                        <img src="icons/services/services-4.svg" alt="">
+                        <img src="<?php echo bloginfo('template_url'); ?>/assets/icons/services/services-4.svg" alt="">
                     </div>
                     <div class="services__item-text">
                         Сиделка для <br> пожилого  человека
@@ -201,7 +63,7 @@
                 </div>
                 <div class="services__item">
                     <div class="services__item-img">
-                        <img src="icons/services/services-5.svg" alt="">
+                        <img src="<?php echo bloginfo('template_url'); ?>/assets/icons/services/services-5.svg" alt="">
                     </div>
                     <div class="services__item-text">
                         Реабилитация <br> после инсульта
@@ -209,7 +71,7 @@
                 </div>
                 <div class="services__item">
                     <div class="services__item-img">
-                        <img src="icons/services/services-6.svg" alt="">    
+                        <img src="<?php echo bloginfo('template_url'); ?>/assets/icons/services/services-6.svg" alt="">    
                     </div>
                     <div class="services__item-text">
                         Реабилитация <br> после инфаркта
@@ -276,7 +138,7 @@
             </div>
         </div>
     </section>
-    <section class="personal" style="background: url('./img/personal.png') no-repeat 50%/cover">
+    <section class="personal" style="background: url('<?php echo bloginfo('template_url'); ?>/assets/img/personal.png') no-repeat 50%/cover">
         <div class="container">
             <div class="title fz72">
                 У нас очень опытный персонал
@@ -297,12 +159,12 @@
                 <div class="subtitle">Наши постояльцы проживают в комфортабельных просторных номерах, <br> которые оборудованы всем необходимым</div>
             </div>
             <div class="conditions__gallery">
-                <img src="./img/condisions/1.png" alt="">
-                <img src="./img/condisions/2.png" alt="">
-                <img src="./img/condisions/3.png" alt="">
-                <img src="./img/condisions/4.png" alt="">
-                <img src="./img/condisions/5.png" alt="">
-                <img src="./img/condisions/6.png" alt="">
+                <img src="<?php echo bloginfo('template_url'); ?>/assets/img/condisions/1.png" alt="">
+                <img src="<?php echo bloginfo('template_url'); ?>/assets/img/condisions/2.png" alt="">
+                <img src="<?php echo bloginfo('template_url'); ?>/assets/img/condisions/3.png" alt="">
+                <img src="<?php echo bloginfo('template_url'); ?>/assets/img/condisions/4.png" alt="">
+                <img src="<?php echo bloginfo('template_url'); ?>/assets/img/condisions/5.png" alt="">
+                <img src="<?php echo bloginfo('template_url'); ?>/assets/img/condisions/6.png" alt="">
             </div>
             <div class="btn mauto w247px h55px">
                 Подробнее   
@@ -319,7 +181,7 @@
             <div class="specialist__items">
                 <div class="specialist__item">
                     <div class="specialist__item-img">
-                        <img src="./img/specialist/1.png" alt="">
+                        <img src="<?php echo bloginfo('template_url'); ?>/assets/img/specialist/1.png" alt="">
                     </div>
                     <div class="specialist__item-body">
                         <div class="specialist__item-title">
@@ -335,7 +197,7 @@
                 </div>
                 <div class="specialist__item">
                     <div class="specialist__item-img">
-                        <img src="./img/specialist/2.png" alt="">
+                        <img src="<?php echo bloginfo('template_url'); ?>/assets/img/specialist/2.png" alt="">
                     </div>
                     <div class="specialist__item-body">
                         <div class="specialist__item-title">
@@ -405,7 +267,7 @@
             </div>
         </div>
     </section>
-    <section class="getprice" style="background: url('./img/get_price.png') no-repeat 50%/cover">
+    <section class="getprice" style="background: url('<?php echo bloginfo('template_url'); ?>/assets/img/get_price.png') no-repeat 50%/cover">
         <div class="container">
             <div class="getprice__title">
                 <div class="title fz54 fff">
@@ -424,13 +286,13 @@
                     Отзывы о нашем пансионате
                 </div>
             </div>
-            <div class="review__slider">
+            <div class="review__slider" data-arrow="<?php echo bloginfo('template_url'); ?>/assets/icons/">
                 <div class="review__slide">
                     <div class="review__slide-text">
                         В нашей жизни все случается. Живу далеко от Украины, мама постарела, но и заболела. Забрала к себе, но так получилось, что заболевание такое, которое требует специального ухода.  Всем нам трудно принять такое неоднозначное решение, нужно ли и хорошо это помещать своих близких в пансионаты. Мы боимся осуждения ... Но когда стоит на чаше весов и здоровье твоих близких и твоё, то здесь не приходится выбирать. Уход за дементными больными требует специальных навыков, мне пришлось принять такое решение. Нас с мамой встретили, привезли в пансионат, сразу же оформили документы, а маму напоили чаем с бутербродами. Все сотрудники приветливы и внимательны, Особые слова благодарности хочу выразить всем сотрудника пансионата, а также Ольге Владимировне за их помощь. Всем добра, тепла и благополучия
                     </div>
                     <div class="review__slide-author">
-                        <img src="./icons/slider/avatar.png" alt="">
+                        <img src="<?php echo bloginfo('template_url'); ?>/assets/icons/slider/avatar.png" alt="">
                         <span>
                             Елена
                         </span>
@@ -441,7 +303,7 @@
                         В нашей жизни все случается. Живу далеко от Украины, мама постарела, но и заболела. Забрала к себе, но так получилось, что заболевание такое, которое требует специального ухода.  Всем нам трудно принять такое неоднозначное решение, нужно ли и хорошо это помещать своих близких в пансионаты. Мы боимся осуждения ... Но когда стоит на чаше весов и здоровье твоих близких и твоё, то здесь не приходится выбирать. Уход за дементными больными требует специальных навыков, мне пришлось принять такое решение. Нас с мамой встретили, привезли в пансионат, сразу же оформили документы, а маму напоили чаем с бутербродами. Все сотрудники приветливы и внимательны, Особые слова благодарности хочу выразить всем сотрудника пансионата, а также Ольге Владимировне за их помощь. Всем добра, тепла и благополучия
                     </div>
                     <div class="review__slide-author">
-                        <img src="./icons/slider/avatar.png" alt="">
+                        <img src="<?php echo bloginfo('template_url'); ?>/assets/icons/slider/avatar.png" alt="">
                         <span>
                             Елена
                         </span>
@@ -462,7 +324,7 @@
             </div>
             <div class="articles__posts">
                 <div class="articles__post">
-                    <img class="articles__post-img" src="./img/articles/1.png" alt="">
+                    <img class="articles__post-img" src="<?php echo bloginfo('template_url'); ?>/assets/img/articles/1.png" alt="">
                     <div class="articles__post-body">
                         <div class="articles__post-title">
                             Персональны уход
@@ -471,7 +333,7 @@
                             In nibh sodales elit et. Diam convallis commodo, facilisis tempus, lobortis justo, laoreet. Eros, scelerisque non ultrices vitae. Vitae in vel libero sagittis quis massa. 
                         </div>
                         <div class="articles__post-author">
-                            <img src="./icons/slider/avatar.png" alt="">
+                            <img src="<?php echo bloginfo('template_url'); ?>/assets/icons/slider/avatar.png" alt="">
                             <div class="articles__post-data">
                                 <div class="articles__post-name">
                                     Ульяна Белова
@@ -484,7 +346,7 @@
                     </div>
                 </div>
                 <div class="articles__post">
-                    <img class="articles__post-img" src="./img/articles/2.png" alt="">
+                    <img class="articles__post-img" src="<?php echo bloginfo('template_url'); ?>/assets/img/articles/2.png" alt="">
                     <div class="articles__post-body">
                         <div class="articles__post-title">
                             Помощь при упражнениях
@@ -493,7 +355,7 @@
                             Fringilla ac blandit nulla enim. Eget ut integer vestibulum iaculis diam arcu, cum rhoncus quam. Nulla vulputate sed cras quis nam elit. At augue sed rhoncus egestas faucibus. A diam pellentesque amet, nisl consectetur morbi egestas aenean. Venenatis non eu vitae massa.
                         </div>
                         <div class="articles__post-author">
-                            <img src="./icons/slider/avatar.png" alt="">
+                            <img src="<?php echo bloginfo('template_url'); ?>/assets/icons/slider/avatar.png" alt="">
                             <div class="articles__post-data">
                                 <div class="articles__post-name">
                                     Ульяна Белова
@@ -506,7 +368,7 @@
                     </div>
                 </div>
                 <div class="articles__post">
-                    <img class="articles__post-img" src="./img/articles/3.png" alt="">
+                    <img class="articles__post-img" src="<?php echo bloginfo('template_url'); ?>/assets/img/articles/3.png" alt="">
                     <div class="articles__post-body">
                         <div class="articles__post-title">
                             Отдых в парке
@@ -515,7 +377,7 @@
                             Pellentesque pharetra, velit magnis imperdiet cum. Arcu tempor ac et non leo facilisis proin malesuada. Convallis sed ridiculus eget sit id. Faucibus donec sit egestas.
                         </div>
                         <div class="articles__post-author">
-                            <img src="./icons/slider/avatar.png" alt="">
+                            <img src="<?php echo bloginfo('template_url'); ?>/assets/icons/slider/avatar.png" alt="">
                             <div class="articles__post-data">
                                 <div class="articles__post-name">
                                     Ульяна Белова
@@ -610,7 +472,7 @@
             <div class="branches__wrapper">
                 <div class="branches__item">
                     <div class="branches__item-img">
-                        <img src="./img/branches/1.png" alt="">
+                        <img src="<?php echo bloginfo('template_url'); ?>/assets/img/branches/1.png" alt="">
                     </div>
                     <div class="branches__item-text">
                         Белая Церковь
@@ -618,7 +480,7 @@
                 </div>
                 <div class="branches__item">
                     <div class="branches__item-img">
-                        <img src="./img/branches/2.png" alt="">
+                        <img src="<?php echo bloginfo('template_url'); ?>/assets/img/branches/2.png" alt="">
                     </div>
                     <div class="branches__item-text">
                         Мелитополь
@@ -626,7 +488,7 @@
                 </div>
                 <div class="branches__item">
                     <div class="branches__item-img">
-                        <img src="./img/branches/3.png" alt="">
+                        <img src="<?php echo bloginfo('template_url'); ?>/assets/img/branches/3.png" alt="">
                     </div>
                     <div class="branches__item-text">
                         Запорожье
@@ -638,7 +500,7 @@
             </div>
         </div>
     </section>
-    <section class="consultation" style="background: url('./img/form-bg.png') no-repeat 50%/cover">
+    <section class="consultation" style="background: url('<?php echo bloginfo('template_url'); ?>/assets/img/form-bg.png') no-repeat 50%/cover">
         <div class="container">
             <div class="consultation__title">
                 <div class="title fz54">
@@ -660,91 +522,6 @@
             </div>
         </div>
     </section>
-    <footer class="footer">
-        <div class="container">
-            <div class="footer__top">
-                <div class="footer__logo">
-                    <img src="icons/logo/logo.svg" alt="">
-                    <div class="footer__logo-title">
-                        тихая гавань
-                    </div>
-                </div>
-                <div class="footer__wrapper">
-                    <div class="footer__item">
-                        <div class="footer__item-title">
-                            Услуги
-                        </div>
-                        <nav>
-                            <ul class="footer__item-menu">
-                                <li>Уход за пожилыми людьми</li>
-                                <li>Уход за лежачими больными</li>
-                                <li>Уход за пожилыми с инвалидностью</li>
-                                <li>Сиделка для пожилого человека</li>
-                                <li>Реабилитация после инсульта</li>
-                                <li>Реабилитация после инфаркта</li>
-                            </ul>
-                        </nav>
-                    </div>
-                    <div class="footer__item">
-                        <div class="footer__item-title">
-                            Наш Адрес:
-                        </div>
-                        <span class="footer__item-adress">
-                            г. Запорожье, <br>
-                            ул. Автозаводская, д. 30
-                        </span>
-                        <div class="footer__item-title">
-                            Email:
-                        </div>
-                        <a class="footer__item-mail" href="mailto:infozp@gmail.com">infozp@gmail.com</a>
-                    </div>
-                    <div class="footer__item">
-                        <div class="footer__item-title">
-                            Позвоните нам:
-                        </div>
-                        <div class="footer__item-number">
-                            <a href="tel:380686981255">+380 68 698 12 55</a>
-                            <a href="tel:380971238877">+380 97 123 88 77</a>
-                        </div>
-                        <div class="btn h55px w247px mainbg mauto">
-                            Проложить маршрут
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="footer__rights">
-                <span>
-                    2021 © Все права защищены 
-                </span>
-                <span>
-                    Присоединяйтесь к нам в социальных сетях
-                    <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M9.92885 19.8577C15.4124 19.8577 19.8577 15.4124 19.8577 9.92885C19.8577 4.4453 15.4124 0 9.92885 0C4.4453 0 0 4.4453 0 9.92885C0 15.4124 4.4453 19.8577 9.92885 19.8577Z" fill="#77953B"/>
-                        <path d="M12.4249 10.3172H10.6533V16.8078H7.96902V10.3172H6.69238V8.03616H7.96902V6.56006C7.96902 5.50448 8.47044 3.85156 10.6772 3.85156L12.6655 3.85988V6.07404H11.2228C10.9862 6.07404 10.6534 6.19227 10.6534 6.69581V8.03829H12.6595L12.4249 10.3172Z" fill="white"/>
-                        </svg>                        
-                </span>
-            </div>
-        </div>
-    </footer>
-    <div class="modal modal-contact" data-modal>
-        <div class="modal__dialog">
-            <div class="modal__content">
-               <div class="modal__content-top">
-                    <div class="modal__content-title">
-                        Оставьте вашу заявку
-                    </div>
-                    <div class="modal__content-subtitle">
-                        В ближайшее время мы свяжемся с Вами и ответим на все вопросы
-                    </div>
-               </div>
-               <form class="modal__content-form">
-                   <input type="text" placeholder="Имя" data-text>
-                   <input type="text" placeholder="Телефон" data-number>
-                   <button class="btn h55px w247px mainbg mauto">Отправить</button>
-               </form>
-            </div>
-        </div>
-    </div>
-    <script src="js/script.js"></script>
-</body>
-</html>
+<?php
+    get_footer();
+?>

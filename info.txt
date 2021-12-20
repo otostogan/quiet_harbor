@@ -1,0 +1,7 @@
+dbName: harbor
+dbUserPass: V9Z5jwQoWazDCtx2
+dbUser: harbor__admin
+
+
+wpUser: harbor__admin
+wpPass: 0((M7GOR79gCVVdU*6
