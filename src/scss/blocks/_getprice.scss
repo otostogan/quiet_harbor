@@ -1,0 +1,19 @@
+.getprice{
+    padding-top: 215px;
+    padding-bottom: 240px;
+    &__title{
+        margin-bottom: 40px;
+    }
+}
+@media (max-width: 525px){
+    .getprice{
+        background-position: 80%!important;
+    }
+}
+@media (max-width: 380px){
+    .getprice{
+        .fz54{
+            font-size: 21px;
+        }
+    }
+}
