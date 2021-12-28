@@ -5,3 +5,7 @@ dbUser: harbor__admin
 
 wpUser: harbor__admin
 wpPass: 0((M7GOR79gCVVdU*6
+
+
+didenko-andrij-vitalijovych
+t&GE^5xpXJH)!!RXho&#t2sJ
