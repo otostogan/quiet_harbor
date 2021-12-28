@@ -3,29 +3,52 @@
     $term = get_queried_object();
 
 ?>
+<?php
+    if(is_category()){
+        ?>
+            <style>
+                .articles{ 
+                    background-color: unset;
+                }
+                .articles__posts{
+                    grid-template-columns: 30% 30% 30%;
+                }
+            </style>
+        <?php
+    }
+?>
+
 <section class="articles">
     <div class="container">
-        <div class="articles__title">
-            <div class="title fz54">
-                <?php
-                    if(ICL_LANGUAGE_CODE == 'uk'){
-                        echo 'Статті';
-                    }else {
-                        echo 'Статьи';
-                    }
+        <?php
+            if(!is_category()){
                 ?>
-            </div>
-            <div class="subtitle">
-                
+                    <div class="articles__title">
+                        <div class="title fz54">
+                            <?php
+                                if(ICL_LANGUAGE_CODE == 'uk'){
+                                    echo 'Статті';
+                                }else {
+                                    echo 'Статьи';
+                                }
+                            ?>
+                        </div>
+                        <div class="subtitle">
+                            
+                            <?php
+                            
+                                if(ICL_LANGUAGE_CODE == 'uk'){
+                                    echo 'У цих статтях ми ділимося своїм багаторічним досвідом та даємо корисні поради';
+                                }else {
+                                    echo 'В этих статьях мы делимся своим многолетним опытом и даем полезные советы';
+                                }
+                            ?>
+                        </div>
+                    </div>
                 <?php
-                    if(ICL_LANGUAGE_CODE == 'uk'){
-                        echo 'У цих статтях ми ділимося своїм багаторічним досвідом та даємо корисні поради';
-                    }else {
-                        echo 'В этих статьях мы делимся своим многолетним опытом и даем полезные советы';
-                    }
-                ?>
-            </div>
-        </div>
+            }
+        ?>
+        
         <div class="articles__posts">
             <?php
                 $args = array(
@@ -40,7 +63,17 @@
                 {
                     ?>
                     <a class="articles__post" href="<?php echo get_permalink($article->ID); ?>">
-                        <img class="articles__post-img" src="<?php echo get_the_post_thumbnail_url($article->ID);?>" alt="">
+                        <?php
+                            $img_link = get_the_post_thumbnail_url($article->ID);
+                            $img_webp = str_replace('uploads/','uploads-webpc/uploads/',$img_link);
+                            if(webItemExists($img_webp.'.webp')){
+                                $image = $img_webp.'.webp';
+                            } else {
+                                $image = $img_link;
+                                
+                            }
+                        ?>
+                        <img class="articles__post-img" src="<?php echo $image;?>" alt="">
                         <div class="articles__post-body">
                             <div class="articles__post-title">
                                 <?php echo get_the_title($article->ID); ?>

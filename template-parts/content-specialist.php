@@ -41,7 +41,17 @@
                     ?>
                         <a class="specialist__item" href="<?php echo get_permalink($item->ID); ?>">
                             <div class="specialist__item-img">
-                                <img src="<?php the_field('1_1', $item->ID)?>" alt="">
+                                <?php
+                                    $img_link = get_field('1_1', $item->ID);
+                                    $img_webp = str_replace('uploads/','uploads-webpc/uploads/',$img_link);
+                                    if(webItemExists($img_webp.'.webp')){
+                                        $image = $img_webp.'.webp';
+                                    } else {
+                                        $image = $img_link;
+                                        
+                                    }
+                                ?>
+                                <img src="<?php echo $image; ?>" alt="">
                             </div>
                             <div class="specialist__item-body">
                                 <div class="specialist__item-title">

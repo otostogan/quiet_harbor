@@ -1,9 +1,19 @@
 <?php
-
+    
     $term = get_queried_object();
+
+    $img_link = get_field('9_3', $term);
+    $img_webp = str_replace('uploads/','uploads-webpc/uploads/',$img_link);
+    if(webItemExists($img_webp.'.webp')){
+        $image = $img_webp.'.webp';
+    } else {
+        $image = $img_link;
+        
+    }
+
     if(is_category('otzyvy')){
         ?>
-            <section class="consultation" style="background: url('<?php the_field('9_3', $term); ?>') no-repeat 50%/cover">
+            <section class="consultation" style="background: url('<?php echo $image; ?>') no-repeat 50%/cover">
                 <div class="container">
                     <div class="consultation__title">
                         <div class="title fz54">
@@ -26,7 +36,7 @@
     }elseif(is_category())
     {
         ?>
-            <section class="consultation" style="background: url('<?php the_field('9_3', $term); ?>') no-repeat 50%/cover">
+            <section class="consultation" style="background: url('<?php echo $image; ?>') no-repeat 50%/cover">
                 <div class="container">
                     <div class="consultation__title">
                         <div class="title fz54">
@@ -48,7 +58,7 @@
         <?php
     }else{
         ?>
-            <section class="consultation" style="background: url('<?php the_field('9_3'); ?>') no-repeat 50%/cover">
+            <section class="consultation" style="background: url('<?php  echo $image; ?>') no-repeat 50%/cover">
                 <div class="container">
                     <div class="consultation__title">
                         <div class="title fz54">

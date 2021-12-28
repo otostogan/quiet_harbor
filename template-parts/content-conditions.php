@@ -8,33 +8,34 @@
             <div class="subtitle"><?php the_field('5_2'); ?></div>
         </div>
         <?php
-            // if($page_template_slug != 'page-about.php')
-            // {
-                ?>
-                    <div class="conditions__gallery">
-                        <?php
-                        $counter = 1;
-                        $photos = get_field('5_3');
-                        
-                        foreach($photos as $photo)
-                        {
-                            $images = $photo[1];
-                            if (!empty($images)){
-                                ?>  
-                                    <img class="conditions__gallery-<?php echo $counter++; ?>" src="<?php echo $images['url'];?>" alt="<?php echo $images['alt'];?>">
-                                <?php
-                            }
-                        }
-                        ?>
-                    </div>
-                <?php
-            // }else {
-                ?>
+            ?>
+                <div class="conditions__gallery">
+                    <?php
+                    $counter = 1;
+                    $photos = get_field('5_3');
                     
-                <?php
-            // }
+                    foreach($photos as $photo)
+                    {
+                        $images = $photo[1];
+                        if (!empty($images)){
+                            ?>  
+                            <?php
+                                 $img_link = $images['url'];
+                                 $img_webp = str_replace('uploads/','uploads-webpc/uploads/',$img_link);
+                                 if(webItemExists($img_webp.'.webp')){
+                                     $image = $img_webp.'.webp';
+                                 } else {
+                                     $image = $img_link;
+                                 }
+                            ?>
+                                <img class="conditions__gallery-<?php echo $counter++; ?>" src="<?php echo $image;?>" alt="">
+                            <?php
+                        }
+                    }
+                    ?>
+                </div>
+            <?php
         ?>
-        
         <?php
             if($page_template_slug != 'page-about.php')
             {

@@ -20,7 +20,16 @@
                                     if (!empty($image)){
                                         ?>  
                                         <div>
-                                            <img class="promo-onlymobil" src="<?php echo $image['url'];?>" alt="<?php echo $image['alt'];?>">
+                                            <?php
+                                                $img_link = $image['url'];;
+                                                $img_webp = str_replace('uploads/','uploads-webpc/uploads/',$img_link);
+                                                if(webItemExists($img_webp.'.webp')){
+                                                    $image = kama_thumb_src(array('src' => $img_webp . '.webp','w' => 1850,'h' => 670));
+                                                } else {
+                                                    $image = kama_thumb_src(array('src' => $img_link ,'w' => 1850,'h' => 670));
+                                                }
+                                            ?>
+                                            <img class="promo-onlymobil" src="<?php echo $image;?>">
                                         </div>
                                         <?php
                                     }
@@ -54,6 +63,18 @@
                         <div class="main__blur"></div>
                     </div> 
                     <div class="main__back"></div>
+                    <?php
+                    if(!is_front_page())
+                        {
+                            ?>
+                                <div class="breadcrumbs">
+                                    <div class="container">
+                                        <?php if( function_exists('kama_breadcrumbs')) kama_breadcrumbs(' » '); ?>
+                                    </div>
+                                </div>
+                            <?php
+                        }
+                    ?>
                 <?php
             }else {
                 ?>
@@ -68,7 +89,16 @@
                                 if (!empty($image)){
                                     ?>  
                                     <div>
-                                        <img class="promo-onlymobil" src="<?php echo $image['url'];?>" alt="<?php echo $image['alt'];?>">
+                                            <?php
+                                                $img_link = $image['url'];;
+                                                $img_webp = str_replace('uploads/','uploads-webpc/uploads/',$img_link);
+                                                if(webItemExists($img_webp.'.webp')){
+                                                    $image = kama_thumb_src(array('src' => $img_webp . '.webp','w' => 1850,'h' => 670));
+                                                } else {
+                                                    $image = kama_thumb_src(array('src' => $img_link ,'w' => 1850,'h' => 670));
+                                                }
+                                            ?>
+                                        <img class="promo-onlymobil" src="<?php echo $image;?>">
                                     </div>
                                     <?php
                                 }
@@ -115,19 +145,20 @@
                 </div> 
                 <div class="main__back"></div>
                 <?php
+                    if(!is_front_page())
+                    {
+                        ?>
+                            <div class="breadcrumbs">
+                                <div class="container">
+                                    <?php if( function_exists('kama_breadcrumbs')) kama_breadcrumbs(' » '); ?>
+                                </div>
+                            </div>
+                        <?php
+                    }
+                ?>
+                <?php
             }
         ?>
        
 </section>
-<?php
-    if(!is_front_page())
-    {
-        ?>
-            <div class="breadcrumbs">
-                <div class="container">
-                    <?php if( function_exists('kama_breadcrumbs')) kama_breadcrumbs(' » '); ?>
-                </div>
-            </div>
-        <?php
-    }
-?>
+

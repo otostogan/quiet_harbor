@@ -8,7 +8,16 @@
         get_template_part('template-parts/content', 'services');
         get_template_part('template-parts/content', 'bennefits');
     ?>
-    <section class="personal" style="background: url('<?php the_field('4_3'); ?>') no-repeat 50%/cover">
+     <?php
+        $img_link = get_field('4_3');
+        $img_webp = str_replace('uploads/','uploads-webpc/uploads/',$img_link);
+        if(webItemExists($img_webp.'.webp')){
+            $image = $img_webp.'.webp';
+        } else {
+            $image = $img_link;
+        }
+    ?>
+    <section class="personal" style="background: url('<?php echo $image; ?>') no-repeat 50%/cover">
         <div class="container">
             <div class="title fz72">
                 <?php the_field('4_1'); ?>

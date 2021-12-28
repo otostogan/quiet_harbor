@@ -32,13 +32,21 @@
                     $term = get_term( $branche->term_id);
                     
                     $link = get_field('page', $term);
-                   
                     $image_id = get_term_meta( $branche->term_id, '_thumbnail_id', 1 );
                     $image_url = wp_get_attachment_image_url( $image_id, 'full' );
+
+                    $img_link = $image_url;
+                    $img_webp = str_replace('uploads/','uploads-webpc/uploads/',$img_link);
+                    if(webItemExists($img_webp.'.webp')){
+                        $image = $img_webp.'.webp';
+                    } else {
+                        $image = $img_link;
+                        
+                    }
                     ?>
                         <a class="branches__item" href="<?php the_field('page', $term);?>">
                             <div class="branches__item-img">
-                                <img src="<?php echo $image_url; ?>" alt="">
+                                <img src="<?php echo $image; ?>" alt="">
                             </div>
                             <div class="branches__item-text">
                                 <?php echo $branche->name ?>

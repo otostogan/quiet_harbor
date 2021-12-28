@@ -1,4 +1,14 @@
-<section class="getprice" style="background: url('<?php the_field('7_1'); ?>') no-repeat 50%/cover">
+<?php
+    $img_link = get_field('7_1');;
+    $img_webp = str_replace('uploads/','uploads-webpc/uploads/',$img_link);
+    if(webItemExists($img_webp.'.webp')){
+        $image = $img_webp.'.webp';
+    } else {
+        $image = $img_link;
+        
+    }
+?>
+<section class="getprice" style="background: url('<?php echo $image; ?>') no-repeat 50%/cover">
     <div class="container">
         <div class="getprice__title">
             <div class="title fz54 fff">

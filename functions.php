@@ -9,7 +9,15 @@ function harbor_scripts(){
     wp_enqueue_script('slick-js', 'https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js', array('jquery'), null, true);
 }
 
-
+function webItemExists($url) {
+    if (($url == '') || ($url == null)) { return false; }
+    $response = wp_remote_head( $url, array( 'timeout' => 5 ) );
+    $accepted_status_codes = array( 200, 301, 302 );
+    if ( ! is_wp_error( $response ) && in_array( wp_remote_retrieve_response_code( $response ), $accepted_status_codes ) ) {
+        return true;
+    }
+    return false;
+}
 ## Отключает новый редактор блоков в WordPress (Гутенберг).
 ## ver: 1.0
 if( 'disable_gutenberg' ){
